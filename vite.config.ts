@@ -4,6 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/prj2/',
   plugins: [
     react(),
     VitePWA({
@@ -74,5 +75,8 @@ export default defineConfig({
       }
     })
   ],
+  build: {
+    outDir: 'docs',
+    emptyOutDir: true,
+  },
 })
-
